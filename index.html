@@ -577,7 +577,59 @@
       margin: 0 auto; max-width: 800px;
     }
 
+    /* ── CASE STUDY ── */
+    .case-intro {
+      display: grid; grid-template-columns: 1fr 280px; gap: 32px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+    .case-badge { font-size: 11px; font-weight: 600; color: var(--blue-light); background: var(--blue-dim); border: 1px solid rgba(79,110,247,0.2); border-radius: 20px; padding: 3px 10px; display: inline-block; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .case-name { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .case-desc { font-size: 13.5px; color: var(--text-dim); line-height: 1.7; margin-bottom: 14px; }
+    .case-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .case-meta-item { font-size: 12px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; }
+    .case-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .case-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+    .case-stat-num { font-size: 20px; font-weight: 700; color: var(--blue-light); margin-bottom: 4px; }
+    .case-stat-label { font-size: 11px; color: var(--text-muted); }
+
+    .case-flow { display: flex; flex-direction: column; gap: 12px; }
+    .case-node { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.3s; }
+    .case-node:hover { border-color: rgba(79,110,247,0.4); }
+    .case-node.expanded { border-color: var(--blue); box-shadow: var(--shadow-card), 0 0 24px rgba(79,110,247,0.12); }
+    .case-node-header { display: flex; align-items: center; gap: 16px; padding: 18px 24px; cursor: pointer; }
+    .case-node-num { width: 36px; height: 36px; border-radius: 50%; background: var(--blue-dim); border: 1px solid var(--blue); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--blue-light); flex-shrink: 0; }
+    .case-node.expanded .case-node-num { background: var(--blue); color: #fff; }
+    .case-node-info { flex: 1; }
+    .case-node-name { font-size: 15px; font-weight: 600; color: var(--text); }
+    .case-node-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .case-node-toggle { width: 22px; height: 22px; border-radius: 50%; background: var(--blue-dim); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--blue-light); font-size: 11px; transition: all 0.3s; flex-shrink: 0; }
+    .case-node.expanded .case-node-toggle { background: var(--blue); color: #fff; transform: rotate(45deg); }
+    .case-node-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .case-node.expanded .case-node-content { max-height: 1000px; }
+
+    .case-output { padding: 0 24px 20px; display: flex; flex-direction: column; gap: 14px; }
+    .case-output-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+    .case-output-label { font-size: 11px; font-weight: 600; color: var(--blue-light); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+    .case-output-text { font-size: 13px; color: var(--text-dim); line-height: 1.75; }
+    .case-tag-fact { font-size: 11px; background: rgba(79,110,247,0.15); color: var(--blue-light); border-radius: 4px; padding: 2px 6px; margin-right: 6px; }
+    .case-tag-warn { font-size: 11px; background: rgba(245,158,11,0.15); color: var(--gold); border-radius: 4px; padding: 2px 6px; margin-right: 6px; }
+    .case-text-dim { font-size: 12px; color: var(--text-muted); }
+    .case-evidence-tag { font-size: 11px; font-weight: 600; border-radius: 4px; padding: 2px 8px; margin-right: 8px; }
+    .case-evidence-tag.same-source { background: rgba(245,158,11,0.15); color: var(--gold); }
+    .case-evidence-tag.strong-source { background: rgba(34,197,94,0.15); color: #4ade80; }
+    .case-conf { font-weight: 700; }
+    .case-conf.low { color: #f87171; }
+    .case-conf.high { color: #4ade80; }
+    .case-verify-hint { font-size: 12px; color: var(--text-muted); display: block; margin-top: 6px; }
+    .case-attack-block { border-left: 3px solid #f87171; }
+    .case-conclusion { font-size: 14px; font-weight: 600; color: var(--gold); }
+
     @media (max-width: 640px) {
+      .case-intro { grid-template-columns: 1fr; }
+      .case-stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
       .nav-links { display: none; }
       .hero { min-height: auto; padding: 80px 0 40px; }
       .hero-stats { gap: 20px; }
@@ -612,6 +664,7 @@
         <a href="http://10.40.23.239:18888/index.html#pipeline">投研 Pipeline</a>
         <a href="http://10.40.23.239:18888/index.html#intel">情报工具</a>
         <a href="http://10.40.23.239:18888/index.html#docs">文档处理</a>
+        <a href="http://10.40.23.239:18888/index.html#case">真实案例</a>
       </div>
     </div>
   </nav>
@@ -695,7 +748,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>自动推荐后续应跑哪几个 skill、以什么顺序运行</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>在 <code style="font-size:11px;background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:3px">deals/{公司名}/</code> 创建项目目录，所有分析产出自动归档</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   所有项目从这里进入。不跳步骤，不让材料质量差的项目消耗后续 skill 资源。<strong>先评估，再行动</strong>。
                 </div>
@@ -739,7 +792,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>涵盖：why now / moat / disconfirming evidence / 主要风险</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>如果 intake-card.md 已存在，自动读取作为背景，不需要重复粘贴材料</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   目标是让任何人拿到这页纸，<strong>5 分钟内形成有质量的初步判断</strong>，而不是读完感觉"说了很多但没有结论"。
                 </div>
@@ -783,7 +836,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>明确列出：最值得优先验证的 3 个问题</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>防止被"材料多=信息多"的幻觉带偏</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   <strong>材料越多，越容易产生虚假的置信度。</strong>Evidence Map 的作用不是总结材料，而是找出材料之间的裂缝。
                 </div>
@@ -827,7 +880,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>每个攻击点必须给出具体论据，不输出空洞的"竞争激烈"</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>默认站在反方立场，比任何 devil's advocate 都更彻底</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   好的投资判断不只是找理由投，更要<strong>找到最硬的理由不投</strong>，然后决定是否能反驳它。
                 </div>
@@ -871,7 +924,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>每个问题注明：想验证什么 / 为什么这个问题信息增量高</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>不输出模板化客套问题，问题服务于判断质量提升</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   与 founder 的每一轮 call 时间都是稀缺资源。<strong>用错问题是最大的浪费</strong>。这个 skill 确保每个问题都在增加信息量。
                 </div>
@@ -914,7 +967,7 @@
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>区分：已知事实 / 高概率推论 / 主观判断，结论的确定性层级清晰</div></div>
                   <div class="expand-feature"><div class="expand-feature-dot"></div><div>给出明确结论：值不值得继续跟进，下一步行动是什么</div></div>
                 </div>
-                <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+                
               <div class="expand-insight">
                   Memo 不是信息的堆砌，而是<strong>判断的文档化</strong>。它必须让读者在 10 分钟内知道：这个项目，投还是不投，为什么。
                 </div>
@@ -957,7 +1010,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>职业轨迹：从哪里来，往哪里走，转折点是什么</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>与 candidate-audit 的区别：本 skill 是外部情报（这人是谁），不是招聘判断（要不要招）</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--gold)">
                 <strong>情报价值 ≠ 信息量。</strong>一份好的人才 profile 应该能告诉你：这个人的判断值不值得认真对待。
               </div>
@@ -982,7 +1035,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>Sanity check 创始人给的数字：10 亿用户 × 10 美元 ARPU 这种说法成立吗？</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>从已知参照物往上推：类比 Spotify、LinkedIn 等可验证的数据点</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--gold)">
                 大部分市场规模的问题不是"数字对不对"，而是<strong>"用的是哪个口径，这个口径服务于哪个判断"</strong>。
               </div>
@@ -1008,7 +1061,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>播客：Latent Space、No Priors、Training Data 等，含全文转写摘要</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>每条内容附原始链接，可直接跳转验证，不是二手信息黑盒</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--gold)">
                 Follow builders，not influencers. <strong>直接追踪真正在建造的人</strong>，而不是那些转发他们说法的人。
               </div>
@@ -1050,7 +1103,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>按话题分组：让长篇逐字稿有结构，不丢内容</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>完成后自动提示：要不要继续用 Meeting Consensus 提取共识和行动项</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--purple)">
                 逐字稿的价值在于保留说话人的<strong>原始语气和逻辑</strong>。过度整理会让你失去最重要的信号。
               </div>
@@ -1075,7 +1128,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>行动项必须带：负责人 / 截止时间 / 验收标准（能写多少写多少）</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>可直接衔接 Transcript skill：逐字稿清洗完，一句话触发出纪要</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--purple)">
                 好的纪要不是把会议内容再说一遍，而是让没参会的人<strong>5 分钟内知道结论、分歧和下一步</strong>。
               </div>
@@ -1101,7 +1154,7 @@
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>AI 使用统计：本周消耗了多少 token，cache 命中率，估算费用</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--purple)"></div><div>所有结论区分置信度：高置信事实 / 近似统计 / 数据缺口</div></div>
               </div>
-              <div class="expand-cta">想获取 skill 请联系小林，并请他吃顿饭 🍜</div>
+              
               <div class="expand-insight" style="border-left-color:var(--purple)">
                 周复盘的价值不在于记录发生了什么，而在于<strong>发现自己尚未意识到的模式</strong>。
               </div>
@@ -1110,6 +1163,185 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── CASE STUDY ── -->
+  <section id="case">
+    <div class="container">
+      <div class="section-header fade-up visible">
+        <div class="section-tag">Section 04 · Case Study</div>
+        <h2>真实输出长什么样</h2>
+        <p>以下为系统对一个可穿戴健康设备项目的实际投研输出（项目名已脱敏）。点击各节点展开查看内容片段。</p>
+      </div>
+
+      <!-- Case intro card -->
+      <div class="case-intro fade-up visible">
+        <div class="case-intro-left">
+          <div class="case-badge">AI Wearable · Pre-A · 北美市场</div>
+          <div class="case-name">Project NeckLens</div>
+          <div class="case-desc">颈部可穿戴饮食健康管理设备。通过 Always-on 视觉传感器实时识别饮食行为，结合 AI 算法生成个性化健康建议。创始人 Alex P.，前华为/字节/理想 AI 产品负责人。</div>
+          <div class="case-meta">
+            <span class="case-meta-item">📎 7份原始材料</span>
+            <span class="case-meta-item">⏱ Pipeline 约 12 分钟</span>
+            <span class="case-meta-item">📄 全档 900+ 行</span>
+          </div>
+        </div>
+        <div class="case-intro-right">
+          <div class="case-stat-grid">
+            <div class="case-stat"><div class="case-stat-num">Seed</div><div class="case-stat-label">融资阶段</div></div>
+            <div class="case-stat"><div class="case-stat-num">$18M</div><div class="case-stat-label">估值</div></div>
+            <div class="case-stat"><div class="case-stat-num">$300</div><div class="case-stat-label">众筹定价</div></div>
+            <div class="case-stat"><div class="case-stat-num">70%</div><div class="case-stat-label">算法准确率</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline output tabs -->
+      <div class="case-flow fade-up visible">
+
+        <!-- Node A: One-Pager -->
+        <div class="case-node" data-case="1">
+          <div class="case-node-header">
+            <div class="case-node-num">01</div>
+            <div class="case-node-info">
+              <div class="case-node-name">Founder One-Pager</div>
+              <div class="case-node-sub">公司首版结构化理解</div>
+            </div>
+            <div class="case-node-toggle">+</div>
+          </div>
+          <div class="case-node-content">
+            <div class="case-output">
+              <div class="case-output-block">
+                <div class="case-output-label">一句话定位</div>
+                <div class="case-output-text">饮食健康管理领域的 AI 原生可穿戴软硬件，填补「精准行为监测 + 落地建议」的市场空白。</div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">创始人背景</div>
+                <div class="case-output-text">【事实】Alex P.：华为鸿蒙/小艺算法 → 字节 AI 手机/Coze → 理想智能眼镜产品定义，EE 专业 + 视觉控制背景，RoboMaster 全国第一。<br><span class="case-tag-fact">强点：产品定义能力</span><span class="case-tag-warn">待验</span><span class="case-text-dim">独立融资经验有限（首次创业）</span></div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">Why Now</div>
+                <div class="case-output-text">【事实】三个技术窗口同时打开：① 动态低功耗传感器成熟（智能门锁/前摄普及）② Meta SAM 模型发布（1B 掩码，50ms 分割）③ VLM 能力持续提升。<br>【高概率推论】窗口期约 18-24 个月，先发优势关键。</div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">当前阶段 &amp; Traction</div>
+                <div class="case-output-text">Seed 已完成，产品处于 DVT 阶段（14g 原型机），Q2 计划 Kickstarter 众筹（目标 4000 台，$300-350），Q3 发售。算法准确率当前约 70%。</div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">核心风险（首版）</div>
+                <div class="case-output-text">① 隐私顾虑（颈部摄像头社交接受度）② 算法准确率瓶颈 ③ 硬件 ID 与目标客群匹配度 ④ 北美市场冷启动路径验证不足</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node B: Evidence Map -->
+        <div class="case-node" data-case="2">
+          <div class="case-node-header">
+            <div class="case-node-num">02</div>
+            <div class="case-node-info">
+              <div class="case-node-name">Evidence Map</div>
+              <div class="case-node-sub">Claim 独立性分析 + 证据交叉验证</div>
+            </div>
+            <div class="case-node-toggle">+</div>
+          </div>
+          <div class="case-node-content">
+            <div class="case-output">
+              <div class="case-output-block">
+                <div class="case-output-label">Claim #1 · 饮食识别准确率 70%</div>
+                <div class="case-output-text">
+                  <span class="case-evidence-tag same-source">同源复述</span> 来源：仅创始人口述，无第三方测试数据<br>
+                  置信度：<span class="case-conf low">低</span> ｜ 反证：复杂菜肴（印度菜/混合食物）创始人自认"完全做不准"<br>
+                  <span class="case-verify-hint">→ 验证路径：要求提供内部测试数据集；或安排产品实测</span>
+                </div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">Claim #2 · 美国成人慢性病市场 2 亿人</div>
+                <div class="case-output-text">
+                  <span class="case-evidence-tag strong-source">强独立</span> 来源：CDC 数据 + 创始人引用 + MyFitnessPal 用户规模（几亿注册）<br>
+                  置信度：<span class="case-conf high">高</span> ｜ 需求真实，但支付意愿和硬件接受度仍需验证
+                </div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">⚠️ 矛盾点</div>
+                <div class="case-output-text">
+                  创始人称"北美用户 90% 喜欢黄金颜色"，但同时称目标用户是"35-55岁有慢性病风险人群"——这两个说法在审美偏好上明显矛盾，前者来自小样本广告测试，后者是产品设计主轴。<br>
+                  外观设计定位与目标用户群之间的张力尚未解决。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node C: Critical Attack -->
+        <div class="case-node" data-case="3">
+          <div class="case-node-header">
+            <div class="case-node-num">03</div>
+            <div class="case-node-info">
+              <div class="case-node-name">Critical Storyline Attack</div>
+              <div class="case-node-sub">最致命攻击点</div>
+            </div>
+            <div class="case-node-toggle">+</div>
+          </div>
+          <div class="case-node-content">
+            <div class="case-output">
+              <div class="case-output-block case-attack-block">
+                <div class="case-output-label">🔴 核心攻击点：「颈部摄像头」是产品的最大障碍，不是功能，是社交接受度</div>
+                <div class="case-output-text">
+                  创始人已承认：用户在公共场合最大的顾虑是"让别人摘掉"而非隐私政策。四十多个用户调研中，隐私顾虑是首要反馈。<br><br>
+                  <strong>为什么这是最致命的：</strong>饮食场景天然是社交场景（餐厅、家庭聚餐），这恰好是产品需要工作的核心场景，同时也是社交压力最大的场景。产品需要最准确工作的时候，用户最可能摘下它。<br><br>
+                  <strong>如果攻击成立：</strong>Kickstarter 的前 4000 台可能被科技爱好者购买，但无法突破到主流用户（35-55 岁慢性病人群），核心假设"从科技圈到慢性病人群"的破圈路径断裂。<br><br>
+                  <strong>创始人的回应：</strong>镜头短焦（30-50cm 后变糊）+ 端上人脸模糊。这解决了隐私技术问题，但没有解决社交观感问题。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node D: Memo conclusion -->
+        <div class="case-node" data-case="4">
+          <div class="case-node-header">
+            <div class="case-node-num">04</div>
+            <div class="case-node-info">
+              <div class="case-node-name">Investment Memo · 结论节</div>
+              <div class="case-node-sub">当前阶段判断</div>
+            </div>
+            <div class="case-node-toggle">+</div>
+          </div>
+          <div class="case-node-content">
+            <div class="case-output">
+              <div class="case-output-block">
+                <div class="case-output-label">当前结论</div>
+                <div class="case-output-text case-conclusion">🟡 Pending — 值得继续跟，但核心假设未验证，不建议当前阶段推进 IC</div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">支撑 thesis 的理由</div>
+                <div class="case-output-text">
+                  ① 需求真实：软件解法长期无法解决行为流数据缺失问题，硬件切入有逻辑<br>
+                  ② Why Now 成立：三个技术窗口同时打开，时机判断合理<br>
+                  ③ 创始人产品能力强：从概念到 DVT 仅 4 个月，执行力有迹可循
+                </div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">核心悬而未决</div>
+                <div class="case-output-text">
+                  ① 社交接受度能否支撑「科技圈 → 慢性病人群」破圈（最关键，目前无数据）<br>
+                  ② 算法准确率能否从 70% 提升到用户可接受阈值（80%+）<br>
+                  ③ Kickstarter 是否能验证目标用户画像（vs. 只是科技爱好者）
+                </div>
+              </div>
+              <div class="case-output-block">
+                <div class="case-output-label">建议下一步</div>
+                <div class="case-output-text">等 Kickstarter 结果（Q2）；重点关注：购买者画像是否含慢性病人群、1个月留存率、产品实测准确率数据</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end case-flow -->
     </div>
   </section>
 
@@ -1134,6 +1366,15 @@
 
     // 非 Hero 区：用 observer 触发
     document.querySelectorAll('.fade-up:not(.hero .fade-up)').forEach(el => observer.observe(el));
+
+    // Case Study 节点展开
+    document.querySelectorAll('.case-node').forEach(node => {
+      node.querySelector('.case-node-header').addEventListener('click', () => {
+        const isOpen = node.classList.contains('expanded');
+        document.querySelectorAll('.case-node').forEach(n => n.classList.remove('expanded'));
+        if (!isOpen) node.classList.add('expanded');
+      });
+    });
 
     // 保险：800ms 后强制让页面所有 fade-up 可见（防止 observer 失效）
     setTimeout(() => {
