@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)http://10.40.23.239:18888/index-v2.html?v=4 -->
+<!-- saved from url=(0043)http://10.40.23.239:18888/index-v2.html?v=8 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -485,6 +485,7 @@
     .level-card[data-level="2"] .level-badge { background: rgba(155,107,255,0.15); color: #c09fff; border: 2px solid var(--purple); }
     .level-card[data-level="3"] .level-badge { background: rgba(245,158,11,0.15); color: var(--gold); border: 2px solid var(--gold); }
     .level-card[data-level="fund"] .level-badge { background: rgba(16,185,129,0.15); color: var(--green); border: 2px solid var(--green); font-size: 16px; }
+    .level-card[data-level="parallel"] .level-badge { background: rgba(34,211,238,0.15); color: var(--cyan); border: 2px solid var(--cyan); font-size: 20px; }
 
     .level-card.expanded .level-badge {
       box-shadow: 0 0 24px rgba(79,110,247,0.3);
@@ -492,6 +493,7 @@
     .level-card[data-level="2"].expanded .level-badge { box-shadow: 0 0 24px rgba(155,107,255,0.3); }
     .level-card[data-level="3"].expanded .level-badge { box-shadow: 0 0 24px rgba(245,158,11,0.3); }
     .level-card[data-level="fund"].expanded .level-badge { box-shadow: 0 0 24px rgba(16,185,129,0.3); }
+    .level-card[data-level="parallel"].expanded .level-badge { box-shadow: 0 0 24px rgba(34,211,238,0.3); }
 
     .level-info { flex: 1; }
     .level-title {
@@ -534,7 +536,7 @@
       opacity: 0;
     }
     .level-card.expanded .level-expand {
-      max-height: 800px;
+      max-height: 1200px;
       opacity: 1;
     }
 
@@ -1142,13 +1144,11 @@
     <div class="inner">
       <div class="nav-brand">小林 · AI 投研工作流</div>
       <div class="nav-links">
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#brain">判断内核</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#pipeline">投研 Pipeline</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#parallel">并行引擎</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#intel">情报工具</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#docs">文档处理</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#abilities">全栈能力</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#case">真实案例</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#brain">判断内核</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#pipeline">投研 Pipeline</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#toolkit">工具箱</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#abilities">全栈能力</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#case">真实案例</a>
       </div>
     </div>
   </nav>
@@ -1177,7 +1177,7 @@
         <div class="hero-stat"><span class="num">20+</span><span class="label">Agent Skills</span></div>
       </div>
       <div class="hero-cta fade-up stagger-5 visible">
-        <a href="http://10.40.23.239:18888/index-v2.html?v=4#brain" class="cta-btn">从判断内核开始 ↓</a>
+        <a href="http://10.40.23.239:18888/index-v2.html?v=8#brain" class="cta-btn">从判断内核开始 ↓</a>
         <span class="cta-hint">想用这套系统？请小林吃顿饭 🍜</span>
       </div>
       <div class="scroll-hint fade-up stagger-6 visible">
@@ -1186,6 +1186,39 @@
       </div>
     </div>
   </section>
+
+  <!-- ── PIPELINE MAP ── -->
+  <div style="background: var(--bg-2); padding: 40px 0 36px; position: relative; z-index: 1;">
+    <div class="container" style="text-align: center;">
+      <div style="font-size: 13px; font-weight: 600; color: var(--text-dim); letter-spacing: 0.5px; margin-bottom: 20px;">端到端：从发现项目到交付报告</div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap;">
+        <!-- Scout -->
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
+          <span>🔭</span> Scout
+        </div>
+        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--blue), var(--purple)); flex-shrink: 0;"></div>
+        <!-- 路由 -->
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
+          <span>🚦</span> 路由
+        </div>
+        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--purple), var(--gold)); flex-shrink: 0;"></div>
+        <!-- L1/L2/L3 -->
+        <div style="background: var(--card); border: 1px solid var(--border-hover); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
+          <span>📎</span>L1 <span style="color: var(--text-muted);">/</span> <span>🎙️</span>L2 <span style="color: var(--text-muted);">/</span> <span>📚</span>L3
+        </div>
+        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--gold), var(--green)); flex-shrink: 0;"></div>
+        <!-- 产出 -->
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
+          <span>📋</span> 产出
+        </div>
+        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--green), var(--cyan)); flex-shrink: 0;"></div>
+        <!-- 交付 -->
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
+          <span>📤</span> 交付
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── SECTION 0: THE BRAIN ── -->
   <section id="brain">
@@ -1257,6 +1290,19 @@
         <div class="section-tag">Section 01 · Research Pipeline</div>
         <h2>投研 Pipeline</h2>
         <p>不同材料深度，不同分析路径。三级体系让每种输入都得到恰当处理——不浪费，不遗漏。</p>
+      </div>
+
+      <!-- Scout Card -->
+      <div class="brain-card fade-up visible" style="margin-bottom: 20px; border-left: 3px solid var(--gold);">
+        <span class="brain-icon">🔭</span>
+        <div class="brain-card-title">Market Scout · 项目发现</div>
+        <div class="brain-card-file">在材料到手之前，系统已经在帮你找项目</div>
+        <ul class="brain-card-list">
+          <li><strong>Product Hunt + GitHub Trending</strong>：每周自动抓取高热度 AI 项目，按投研标准筛选值得关注的</li>
+          <li><strong>公众号监控</strong>：关注的行业公众号有新文章时自动提取项目信息</li>
+          <li><strong>自动生成 One Pager</strong>：通过筛选的项目直接生成结构化简介，推送到 IM</li>
+          <li><strong>无需主动搜索</strong>：项目自己"冒"出来，你只需要决定要不要进入 L1</li>
+        </ul>
       </div>
 
       <!-- Router Card -->
@@ -1407,82 +1453,79 @@
           </div>
         </div>
 
+        <!-- Parallel Execution (compressed) -->
+        <div class="level-card fade-up stagger-4 visible" data-level="parallel" style="cursor: pointer;">
+          <div class="level-header">
+            <div class="level-badge" style="background: rgba(34,211,238,0.15); color: var(--cyan); border: 2px solid var(--cyan); font-size: 20px;">⚡</div>
+            <div class="level-info">
+              <div class="level-title">并行执行</div>
+              <div class="level-subtitle">多个 sub-agent 同时工作，完成后自动交付</div>
+            </div>
+            <div class="level-toggle">+</div>
+          </div>
+          <div class="level-expand">
+            <div class="level-expand-inner">
+              <div class="parallel-diagram">
+                <div class="parallel-input">
+                  <div class="parallel-input-box">
+                    <span class="parallel-input-icon">🎙️</span>
+                    用户发来一份 ASR 录音稿
+                  </div>
+                </div>
+                <div class="parallel-split" style="height: 48px;"></div>
+                <div class="parallel-tracks">
+                  <div class="parallel-track">
+                    <div class="track-label agent-a">Sub-Agent A</div>
+                    <div class="track-task">逐字稿清洗</div>
+                    <div class="track-desc">保持原意、去 ASR 噪音、按话题分组</div>
+                    <div class="track-status">并行运行中</div>
+                  </div>
+                  <div class="parallel-track">
+                    <div class="track-label agent-b">Sub-Agent B</div>
+                    <div class="track-task">投研报告从零重写</div>
+                    <div class="track-desc">One Pager + Question List + 核心判断</div>
+                    <div class="track-status">并行运行中</div>
+                  </div>
+                </div>
+                <div class="parallel-merge" style="height: 48px;"></div>
+                <div style="text-align: center;">
+                  <div class="parallel-output">
+                    <span>✅</span>
+                    自动上传 Redoc → 发链接到 IM → 用户收到两份完成文档
+                  </div>
+                </div>
+                <div class="parallel-features">
+                  <div class="parallel-feature">
+                    <span class="parallel-feature-icon">⚡</span>
+                    <div>两个 agent 独立运行，互不阻塞，各自超时控制</div>
+                  </div>
+                  <div class="parallel-feature">
+                    <span class="parallel-feature-icon">📤</span>
+                    <div>完成后立即上传到 Redoc 文档平台并通过 IM 推送链接，不需要手动收集</div>
+                  </div>
+                  <div class="parallel-feature">
+                    <span class="parallel-feature-icon">🔒</span>
+                    <div>主会话保持响应——等 sub-agent 跑的同时，你可以继续问其他问题</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <!-- ── SECTION 2: PARALLEL ENGINE ── -->
-  <section id="parallel">
+  <!-- ── SECTION 2: TOOLKIT (merged Intel + Docs) ── -->
+  <section id="toolkit">
     <div class="container">
       <div class="section-header fade-up visible">
-        <div class="section-tag cyan">Section 02 · Parallel Engine</div>
-        <h2>并行执行引擎</h2>
-        <p>不是串行等待，是真正的并行。多个 sub-agent 同时工作，完成后自动交付。</p>
-      </div>
-
-      <div class="parallel-diagram fade-up visible">
-        <div class="parallel-input">
-          <div class="parallel-input-box">
-            <span class="parallel-input-icon">🎙️</span>
-            用户发来一份 ASR 录音稿
-          </div>
-        </div>
-
-        <div class="parallel-split" style="height: 48px;"></div>
-
-        <div class="parallel-tracks">
-          <div class="parallel-track">
-            <div class="track-label agent-a">Sub-Agent A</div>
-            <div class="track-task">逐字稿清洗</div>
-            <div class="track-desc">保持原意、去 ASR 噪音、按话题分组</div>
-            <div class="track-status">并行运行中</div>
-          </div>
-          <div class="parallel-track">
-            <div class="track-label agent-b">Sub-Agent B</div>
-            <div class="track-task">投研报告从零重写</div>
-            <div class="track-desc">One Pager + Question List + 核心判断</div>
-            <div class="track-status">并行运行中</div>
-          </div>
-        </div>
-
-        <div class="parallel-merge" style="height: 48px;"></div>
-
-        <div style="text-align: center;">
-          <div class="parallel-output">
-            <span>✅</span>
-            自动上传 Redoc → 发链接到 IM → 用户收到两份完成文档
-          </div>
-        </div>
-
-        <div class="parallel-features">
-          <div class="parallel-feature">
-            <span class="parallel-feature-icon">⚡</span>
-            <div>两个 agent 独立运行，互不阻塞，各自超时控制</div>
-          </div>
-          <div class="parallel-feature">
-            <span class="parallel-feature-icon">📤</span>
-            <div>完成后立即上传到 Redoc 文档平台并通过 IM 推送链接，不需要手动收集</div>
-          </div>
-          <div class="parallel-feature">
-            <span class="parallel-feature-icon">🔒</span>
-            <div>主会话保持响应——等 sub-agent 跑的同时，你可以继续问其他问题</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ── SECTION 3: INTEL TOOLS ── -->
-  <section id="intel">
-    <div class="container">
-      <div class="section-header fade-up visible">
-        <div class="section-tag gold">Section 03 · Intelligence</div>
-        <h2>情报与研究工具</h2>
-        <p>覆盖 AI 人才、市场数据、Builder 动态的实时情报体系。</p>
+        <div class="section-tag gold">Section 02 · Toolkit</div>
+        <h2>研究工具箱</h2>
+        <p>情报采集、市场分析、文档处理——投研过程中的全套工具。</p>
       </div>
 
       <div class="tools-grid">
@@ -1557,23 +1600,6 @@
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ── SECTION 4: DOCS ── -->
-  <section id="docs">
-    <div class="container">
-      <div class="section-header fade-up visible">
-        <div class="section-tag purple">Section 04 · Documents</div>
-        <h2>访谈与文档处理</h2>
-        <p>从转写稿清洗到会议共识提取，完整覆盖文档生命周期。</p>
-      </div>
-
-      <div class="tools-grid">
-
         <div class="tool-card purple-accent fade-up visible">
           <div class="tool-card-header">
             <span class="tool-emoji">🎙️</span>
@@ -1626,11 +1652,11 @@
 
   <div class="section-divider"></div>
 
-  <!-- ── SECTION 5: FULL-STACK ABILITIES ── -->
+  <!-- ── SECTION 3: FULL-STACK ABILITIES ── -->
   <section id="abilities">
     <div class="container">
       <div class="section-header fade-up visible">
-        <div class="section-tag green">Section 05 · Full-Stack Agent</div>
+        <div class="section-tag green">Section 03 · Full-Stack Agent</div>
         <h2>全栈 Agent 能力</h2>
         <p>这不只是投研——同一个 agent 还是健身教练、日程管家、候选人审计官、睡眠分析师。</p>
       </div>
@@ -1676,19 +1702,19 @@
 
   <div class="section-divider"></div>
 
-  <!-- ── SECTION 6: CASE STUDY ── -->
+  <!-- ── SECTION 4: CASE STUDY ── -->
   <section id="case">
     <div class="container">
       <div class="section-header fade-up visible">
-        <div class="section-tag">Section 06 · Real Output</div>
+        <div class="section-tag">Section 04 · Real Output</div>
         <h2>真实输出长什么样</h2>
         <p>不是 demo，是实际跑出来的产出。点击标签切换案例。</p>
       </div>
 
       <!-- Case tabs -->
       <div class="case-tabs fade-up visible">
-        <div class="case-tab active" data-target="case-necklens">📎 Project NeckLens</div>
-
+        <div class="case-tab active" data-target="case-necklens">📎 投研案例 · NeckLens</div>
+        <div class="case-tab" data-target="case-fitness">🏋️ 健身 + 睡眠分析</div>
       </div>
 
       <!-- Case Panel: NeckLens -->
@@ -1823,7 +1849,128 @@
         </div><!-- end case-flow -->
       </div><!-- end case-necklens -->
 
+      <!-- Case Panel: Fitness + Sleep -->
+      <div class="case-panel" id="case-fitness">
+        <div class="case-intro fade-up visible">
+          <div class="case-intro-left">
+            <div class="case-badge">Whoop API · 日历 API · 四维归因</div>
+            <div class="case-name">每日恢复分析</div>
+            <div class="case-desc">从 Whoop API 自动拉取睡眠与恢复数据，交叉前一天的日程负荷和训练记录，用四维归因框架（睡眠 × 日程 × 训练 × 生活方式）输出训练建议。</div>
+            <div class="case-meta">
+              <span class="case-meta-item">📊 从 Whoop API 自动拉取</span>
+              <span class="case-meta-item">📅 日程 API 交叉</span>
+              <span class="case-meta-item">🏋️ 训练档案匹配</span>
+            </div>
+          </div>
+          <div class="case-intro-right">
+            <div class="case-stat-grid">
+              <div class="case-stat"><div class="case-stat-num">4 维</div><div class="case-stat-label">归因框架</div></div>
+              <div class="case-stat"><div class="case-stat-num">A/B/C</div><div class="case-stat-label">三档建议</div></div>
+              <div class="case-stat"><div class="case-stat-num">自动</div><div class="case-stat-label">数据拉取</div></div>
+              <div class="case-stat"><div class="case-stat-num">每日</div><div class="case-stat-label">持续追踪</div></div>
+            </div>
+          </div>
+        </div>
 
+        <div class="case-flow fade-up visible">
+          <!-- Step 1: 数据接收 -->
+          <div class="case-node" data-case="f1">
+            <div class="case-node-header">
+              <div class="case-node-num">01</div>
+              <div class="case-node-info">
+                <div class="case-node-name">Whoop 数据拉取</div>
+                <div class="case-node-sub">睡眠分期 + 恢复指标</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">睡眠结构示例</div>
+                  <div class="case-output-text">深睡占比 20% ✅ 启动强健<br>REM 占比 32% ✅ 高于常态<br>恢复性睡眠（深睡+REM）42%，在推荐区间 40-50% 内</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">恢复指标</div>
+                  <div class="case-output-text">Recovery 黄区（中等恢复）<br>HRV 略低于个人基线均值 ⚠️<br>RHR 正常区间 ✅<br>睡眠压力极低 ✅</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: 日程拉取 -->
+          <div class="case-node" data-case="f2">
+            <div class="case-node-header">
+              <div class="case-node-num">02</div>
+              <div class="case-node-info">
+                <div class="case-node-name">前日日程自动拉取</div>
+                <div class="case-node-sub">通过日历 API 获取真实会议</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">日程负荷分析</div>
+                  <div class="case-output-text">自动拉取前一天所有日程，按规则分类：真实会议正常统计、健身标记排除、差旅标记为疲劳因子。<br><br>示例输出：<strong>🔴 重度日</strong> — 多个连续会议无断档 + 晚间应酬推迟入睡</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: 训练交叉 -->
+          <div class="case-node" data-case="f3">
+            <div class="case-node-header">
+              <div class="case-node-num">03</div>
+              <div class="case-node-info">
+                <div class="case-node-name">训练日志交叉分析</div>
+                <div class="case-node-sub">匹配训练档案中的动作与负荷</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">训练匹配</div>
+                  <div class="case-output-text">从训练日志中读取前一天的具体动作、组数、重量、总 tonnage、心率分区分布，与个人基线对比判断负荷等级。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">⚠️ 红旗信号检测</div>
+                  <div class="case-output-text">自动识别异常信号（如训练中头晕、锐痛、心率异常），结合日程和恢复数据追溯根因，而非孤立看待。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: 四维归因 -->
+          <div class="case-node" data-case="f4">
+            <div class="case-node-header">
+              <div class="case-node-num">04</div>
+              <div class="case-node-info">
+                <div class="case-node-name">四维归因 · 训练建议</div>
+                <div class="case-node-sub">训练 × 日程 × 睡眠 × 生活方式</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">归因框架</div>
+                  <div class="case-output-text">
+                    四个维度按贡献排序，每个标注影响权重：<br>
+                    ⭐⭐⭐ 主导因素（如：晚间应酬推迟入睡）<br>
+                    ⭐⭐ 叠加因素（如：训练负荷 + 会前疲劳）<br>
+                    ⭐ 背景因素（如：慢性睡眠债累积）
+                  </div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">输出示例</div>
+                  <div class="case-output-text case-conclusion">Recovery 黄区 → B 档训练：降强度 20%，减组数<br>Recovery 红区 → 完全休息或仅 Zone 2<br><strong>红线：出现头晕/锐痛 → 立即停止，不继续</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end case-fitness -->
 
     </div>
   </section>
