@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)http://10.40.23.239:18888/index-v2.html?v=8 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小林的 AI 投研工作流 · Xiaolin's AI Research Workflow</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./小林的 AI 投研工作流 · Xiaolin&#39;s AI Research Workflow_files/css2" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -289,11 +288,11 @@
       border-radius: 4px;
       margin-bottom: 16px;
     }
-    .section-tag.gold { background: var(--gold-dim); border-color: rgba(245,158,11,0.2); color: var(--gold); }
-    .section-tag.purple { background: var(--purple-dim); border-color: rgba(155,107,255,0.2); color: #c09fff; }
-    .section-tag.green { background: var(--green-dim); border-color: rgba(16,185,129,0.2); color: var(--green); }
-    .section-tag.cyan { background: var(--cyan-dim); border-color: rgba(34,211,238,0.2); color: var(--cyan); }
-    .section-tag.red { background: var(--red-dim); border-color: rgba(248,113,113,0.2); color: var(--red); }
+    .section-tag.gold { background: var(--gold-dim); border-color: rgba(245,158,11,0.3); color: var(--gold); }
+    .section-tag.purple { background: var(--purple-dim); border-color: rgba(155,107,255,0.3); color: #c09fff; }
+    .section-tag.green { background: var(--green-dim); border-color: rgba(16,185,129,0.3); color: var(--green); }
+    .section-tag.cyan { background: var(--cyan-dim); border-color: rgba(34,211,238,0.3); color: var(--cyan); }
+    .section-tag.red { background: var(--red-dim); border-color: rgba(248,113,113,0.3); color: var(--red); }
     .section-header h2 {
       font-size: clamp(22px, 4vw, 36px);
       font-weight: 700;
@@ -487,6 +486,12 @@
     .level-card[data-level="fund"] .level-badge { background: rgba(16,185,129,0.15); color: var(--green); border: 2px solid var(--green); font-size: 16px; }
     .level-card[data-level="parallel"] .level-badge { background: rgba(34,211,238,0.15); color: var(--cyan); border: 2px solid var(--cyan); font-size: 20px; }
 
+    /* Post-invest level-card badge styles */
+    .level-card[data-level="log"] .level-badge { background: var(--red-dim); color: var(--red); border: 2px solid var(--red); }
+    .level-card[data-level="growth"] .level-badge { background: var(--green-dim); color: var(--green); border: 2px solid var(--green); }
+    .level-card[data-level="finance"] .level-badge { background: var(--gold-dim); color: var(--gold); border: 2px solid var(--gold); }
+    .level-card[data-level="alert"] .level-badge { background: var(--red-dim); color: var(--red); border: 2px solid var(--red); }
+
     .level-card.expanded .level-badge {
       box-shadow: 0 0 24px rgba(79,110,247,0.3);
     }
@@ -494,6 +499,10 @@
     .level-card[data-level="3"].expanded .level-badge { box-shadow: 0 0 24px rgba(245,158,11,0.3); }
     .level-card[data-level="fund"].expanded .level-badge { box-shadow: 0 0 24px rgba(16,185,129,0.3); }
     .level-card[data-level="parallel"].expanded .level-badge { box-shadow: 0 0 24px rgba(34,211,238,0.3); }
+    .level-card[data-level="log"].expanded .level-badge { box-shadow: 0 0 24px rgba(248,113,113,0.3); }
+    .level-card[data-level="growth"].expanded .level-badge { box-shadow: 0 0 24px rgba(16,185,129,0.3); }
+    .level-card[data-level="finance"].expanded .level-badge { box-shadow: 0 0 24px rgba(245,158,11,0.3); }
+    .level-card[data-level="alert"].expanded .level-badge { box-shadow: 0 0 24px rgba(248,113,113,0.3); }
 
     .level-info { flex: 1; }
     .level-title {
@@ -536,7 +545,7 @@
       opacity: 0;
     }
     .level-card.expanded .level-expand {
-      max-height: 1200px;
+      max-height: 2000px;
       opacity: 1;
     }
 
@@ -592,6 +601,11 @@
     .level-card[data-level="2"] .level-skill-tag { background: var(--purple-dim); border-color: rgba(155,107,255,0.2); color: #c09fff; }
     .level-card[data-level="3"] .level-skill-tag { background: var(--gold-dim); border-color: rgba(245,158,11,0.2); color: var(--gold); }
     .level-card[data-level="fund"] .level-skill-tag { background: var(--green-dim); border-color: rgba(16,185,129,0.2); color: var(--green); }
+    /* Post-invest skill tags */
+    .level-card[data-level="log"] .level-skill-tag { background: var(--red-dim); border-color: rgba(248,113,113,0.2); color: var(--red); }
+    .level-card[data-level="growth"] .level-skill-tag { background: var(--green-dim); border-color: rgba(16,185,129,0.2); color: var(--green); }
+    .level-card[data-level="finance"] .level-skill-tag { background: var(--gold-dim); border-color: rgba(245,158,11,0.2); color: var(--gold); }
+    .level-card[data-level="alert"] .level-skill-tag { background: var(--red-dim); border-color: rgba(248,113,113,0.2); color: var(--red); }
 
     .level-note {
       font-size: 13px;
@@ -608,6 +622,10 @@
     .level-card[data-level="2"] .level-note { border-left-color: var(--purple); }
     .level-card[data-level="3"] .level-note { border-left-color: var(--gold); }
     .level-card[data-level="fund"] .level-note { border-left-color: var(--green); }
+    .level-card[data-level="log"] .level-note { border-left-color: var(--red); }
+    .level-card[data-level="growth"] .level-note { border-left-color: var(--green); }
+    .level-card[data-level="finance"] .level-note { border-left-color: var(--gold); }
+    .level-card[data-level="alert"] .level-note { border-left-color: var(--red); }
 
     /* ── PARALLEL ENGINE ── */
     #parallel { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
@@ -786,7 +804,7 @@
     }
 
     /* ── GRID SECTIONS ── */
-    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
     .tool-card {
       background: var(--card);
@@ -827,7 +845,6 @@
     .tool-card-header { display: flex; justify-content: space-between; align-items: flex-start; }
     .tool-emoji {
       font-size: 32px; margin-bottom: 14px; display: block;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
     }
     .tool-toggle {
       width: 22px; height: 22px; border-radius: 50%;
@@ -927,9 +944,26 @@
     }
 
     .ability-emoji {
-      font-size: 36px;
-      margin-bottom: 14px;
-      display: block;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .ability-card:nth-child(1) .ability-emoji {
+      background: rgba(79,110,247,0.15);
+      border: 1px solid rgba(79,110,247,0.3);
+    }
+    .ability-card:nth-child(2) .ability-emoji {
+      background: rgba(155,107,255,0.15);
+      border: 1px solid rgba(155,107,255,0.3);
+    }
+    .ability-card:nth-child(3) .ability-emoji {
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.3);
     }
     .ability-name {
       font-size: 15px;
@@ -1054,6 +1088,118 @@
     .case-attack-block { border-left: 3px solid #f87171; }
     .case-conclusion { font-size: 14px; font-weight: 600; color: var(--gold); }
 
+    /* ── POST-INVEST SECTION ── */
+    #post-invest { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
+
+    /* Post-invest level cards hover gradient animation */
+    #post-invest .level-card {
+      position: relative;
+      overflow: hidden;
+    }
+    #post-invest .level-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+      border-radius: var(--radius);
+    }
+    #post-invest .level-card[data-level="log"]::before {
+      background: linear-gradient(135deg, rgba(248,113,113,0.04) 0%, rgba(248,113,113,0.01) 50%, transparent 100%);
+    }
+    #post-invest .level-card[data-level="growth"]::before {
+      background: linear-gradient(135deg, rgba(16,185,129,0.04) 0%, rgba(16,185,129,0.01) 50%, transparent 100%);
+    }
+    #post-invest .level-card[data-level="finance"]::before {
+      background: linear-gradient(135deg, rgba(245,158,11,0.04) 0%, rgba(245,158,11,0.01) 50%, transparent 100%);
+    }
+    #post-invest .level-card[data-level="alert"]::before {
+      background: linear-gradient(135deg, rgba(248,113,113,0.06) 0%, rgba(248,113,113,0.02) 50%, transparent 100%);
+    }
+    #post-invest .level-card:hover::before {
+      opacity: 1;
+    }
+    #post-invest .level-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Alert table styles */
+    .alert-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(248,113,113,0.15);
+    }
+    .alert-table th {
+      background: rgba(248,113,113,0.08);
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-align: left;
+      border-bottom: 1px solid rgba(248,113,113,0.15);
+    }
+    .alert-table td {
+      padding: 8px 14px;
+      font-size: 12px;
+      color: var(--text-dim);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .alert-table tr:last-child td { border-bottom: none; }
+    .alert-yellow { color: #fbbf24; font-weight: 600; }
+    .alert-red { color: #f87171; font-weight: 600; }
+
+    /* ── Pipeline Map Glow ── */
+    .pipeline-connector {
+      width: 32px;
+      height: 2px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .pipeline-connector::after {
+      content: '';
+      position: absolute;
+      inset: -2px 0;
+      border-radius: 2px;
+      filter: blur(4px);
+      opacity: 0.6;
+    }
+    .pipeline-connector.glow-1 {
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+    .pipeline-connector.glow-1::after {
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+    }
+    .pipeline-connector.glow-2 {
+      background: linear-gradient(90deg, var(--purple), var(--gold));
+    }
+    .pipeline-connector.glow-2::after {
+      background: linear-gradient(90deg, var(--purple), var(--gold));
+    }
+    .pipeline-connector.glow-3 {
+      background: linear-gradient(90deg, var(--gold), var(--green));
+    }
+    .pipeline-connector.glow-3::after {
+      background: linear-gradient(90deg, var(--gold), var(--green));
+    }
+    .pipeline-connector.glow-4 {
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+    }
+    .pipeline-connector.glow-4::after {
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+    }
+    .pipeline-connector.glow-5 {
+      background: linear-gradient(90deg, var(--cyan), var(--red));
+    }
+    .pipeline-connector.glow-5::after {
+      background: linear-gradient(90deg, var(--cyan), var(--red));
+    }
+
     /* ── Today Task List ── */
     .today-tasks {
       display: flex;
@@ -1144,11 +1290,12 @@
     <div class="inner">
       <div class="nav-brand">小林 · AI 投研工作流</div>
       <div class="nav-links">
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#brain">判断内核</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#pipeline">投研 Pipeline</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#toolkit">工具箱</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#abilities">全栈能力</a>
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#case">真实案例</a>
+        <a href="#brain">判断内核</a>
+        <a href="#pipeline">投研 Pipeline</a>
+        <a href="#toolkit">工具箱</a>
+        <a href="#abilities">全栈能力</a>
+        <a href="#post-invest">投后管理</a>
+        <a href="#case">真实案例</a>
       </div>
     </div>
   </nav>
@@ -1156,31 +1303,33 @@
   <!-- ── HERO ── -->
   <section class="hero">
     <div class="hero-inner container">
-      <div class="hero-badge fade-up visible">AI Agent · 投资研究体系</div>
-      <h1 class="fade-up stagger-1 visible">
+      <div class="hero-badge fade-up">AI Agent · 投资研究体系</div>
+      <h1 class="fade-up stagger-1">
         <span class="cn">小林的</span><br>
         <span class="en">AI</span><span class="cn"> 投研工作流</span><br>
         <span class="en-2">Research Workflow</span>
       </h1>
-      <p class="hero-sub fade-up stagger-2 visible">不是一个工具，是一个有判断标准、有记忆、会自我迭代的 AI 投研搭档</p>
-      <div class="hero-why fade-up stagger-3 visible">
+      <p class="hero-sub fade-up stagger-2">不是一个工具，是一个有判断标准、有记忆、会自我迭代的 AI 投研搭档</p>
+      <div class="hero-why fade-up stagger-3">
         它不附和你、不被漂亮 narrative 带偏、永远从真实的用户反馈中寻找 PMF。<br>
         它有自己的<span class="hw-highlight">投研标准</span>，有跨项目的<span class="hw-highlight">持续记忆</span>，犯过的错会变成<span class="hw-highlight">永久规则</span>。<br>
         从一份 Founder Call 录音到完整投研报告，全自动，10 分钟。
       </div>
-      <p class="hero-author fade-up stagger-3 visible">Built by <span>小林</span></p>
-      <div class="hero-stats fade-up stagger-4 visible">
+      <p class="hero-author fade-up stagger-3">Built by <span>小林</span></p>
+      <div class="hero-stats fade-up stagger-4">
         <div class="hero-stat"><span class="num">10</span><span class="label">分钟出全档</span></div>
         <div class="hero-divider"></div>
         <div class="hero-stat"><span class="num-text">L1/L2/L3</span><span class="label">三级投研体系</span></div>
         <div class="hero-divider"></div>
-        <div class="hero-stat"><span class="num">20+</span><span class="label">Agent Skills</span></div>
+        <div class="hero-stat"><span class="num">30+</span><span class="label">Agent Skills</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="num-text">全链路</span><span class="label">投前到投后覆盖</span></div>
       </div>
-      <div class="hero-cta fade-up stagger-5 visible">
-        <a href="http://10.40.23.239:18888/index-v2.html?v=8#brain" class="cta-btn">从判断内核开始 ↓</a>
+      <div class="hero-cta fade-up stagger-5">
+        <a href="#brain" class="cta-btn">从判断内核开始 ↓</a>
         <span class="cta-hint">想用这套系统？请小林吃顿饭 🍜</span>
       </div>
-      <div class="scroll-hint fade-up stagger-6 visible">
+      <div class="scroll-hint fade-up stagger-6">
         <span>点击卡片可展开详情</span>
         <div class="arrow"></div>
       </div>
@@ -1196,25 +1345,30 @@
         <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
           <span>🔭</span> Scout
         </div>
-        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--blue), var(--purple)); flex-shrink: 0;"></div>
+        <div class="pipeline-connector glow-1"></div>
         <!-- 路由 -->
         <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
           <span>🚦</span> 路由
         </div>
-        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--purple), var(--gold)); flex-shrink: 0;"></div>
+        <div class="pipeline-connector glow-2"></div>
         <!-- L1/L2/L3 -->
         <div style="background: var(--card); border: 1px solid var(--border-hover); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
           <span>📎</span>L1 <span style="color: var(--text-muted);">/</span> <span>🎙️</span>L2 <span style="color: var(--text-muted);">/</span> <span>📚</span>L3
         </div>
-        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--gold), var(--green)); flex-shrink: 0;"></div>
+        <div class="pipeline-connector glow-3"></div>
         <!-- 产出 -->
         <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
           <span>📋</span> 产出
         </div>
-        <div style="width: 32px; height: 2px; background: linear-gradient(90deg, var(--green), var(--cyan)); flex-shrink: 0;"></div>
+        <div class="pipeline-connector glow-4"></div>
         <!-- 交付 -->
         <div style="background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap;">
           <span>📤</span> 交付
+        </div>
+        <div class="pipeline-connector glow-5"></div>
+        <!-- 投后 -->
+        <div style="background: var(--card); border: 1px solid rgba(248,113,113,0.3); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--red); white-space: nowrap;">
+          <span>📈</span> 投后
         </div>
       </div>
     </div>
@@ -1223,19 +1377,19 @@
   <!-- ── SECTION 0: THE BRAIN ── -->
   <section id="brain">
     <div class="container">
-      <div class="section-header fade-up visible">
+      <div class="section-header fade-up">
         <div class="section-tag red">Section 00 · The Brain</div>
         <h2>判断内核</h2>
         <p>这不是一个通用 GPT 套了个 prompt。这是一个被训练了特定投研标准的 agent。</p>
       </div>
 
-      <div class="brain-quote fade-up visible">
+      <div class="brain-quote fade-up">
         这是一个被训练了特定投研标准的 agent，它有记忆，会犯错，但<strong>犯过的错不会犯第二次</strong>。
       </div>
 
       <div class="brain-grid">
         <!-- Brain Card 1: SOUL.md -->
-        <div class="brain-card fade-up visible">
+        <div class="brain-card fade-up">
           <span class="brain-icon">⚖️</span>
           <div class="brain-card-title">判断标准</div>
           <div class="brain-card-file">SOUL.md</div>
@@ -1249,7 +1403,7 @@
         </div>
 
         <!-- Brain Card 2: MEMORY.md -->
-        <div class="brain-card fade-up stagger-1 visible">
+        <div class="brain-card fade-up stagger-1">
           <span class="brain-icon">🧠</span>
           <div class="brain-card-title">持续记忆</div>
           <div class="brain-card-file">MEMORY.md</div>
@@ -1264,7 +1418,7 @@
         </div>
 
         <!-- Brain Card 3: Self-improvement -->
-        <div class="brain-card fade-up stagger-2 visible">
+        <div class="brain-card fade-up stagger-2">
           <span class="brain-icon">🔄</span>
           <div class="brain-card-title">自我改进闭环</div>
           <div class="brain-card-file">LEARNINGS.md → AGENTS.md</div>
@@ -1286,14 +1440,14 @@
   <!-- ── SECTION 1: PIPELINE L1/L2/L3 ── -->
   <section id="pipeline">
     <div class="container">
-      <div class="section-header fade-up visible">
+      <div class="section-header fade-up">
         <div class="section-tag">Section 01 · Research Pipeline</div>
         <h2>投研 Pipeline</h2>
         <p>不同材料深度，不同分析路径。三级体系让每种输入都得到恰当处理——不浪费，不遗漏。</p>
       </div>
 
       <!-- Scout Card -->
-      <div class="brain-card fade-up visible" style="margin-bottom: 20px; border-left: 3px solid var(--gold);">
+      <div class="brain-card fade-up" style="margin-bottom: 20px; border-left: 3px solid var(--gold);">
         <span class="brain-icon">🔭</span>
         <div class="brain-card-title">Market Scout · 项目发现</div>
         <div class="brain-card-file">在材料到手之前，系统已经在帮你找项目</div>
@@ -1306,7 +1460,7 @@
       </div>
 
       <!-- Router Card -->
-      <div class="brain-card fade-up visible" style="margin-bottom: 32px; border-left: 3px solid var(--blue);">
+      <div class="brain-card fade-up" style="margin-bottom: 32px; border-left: 3px solid var(--blue);">
         <span class="brain-icon">🚦</span>
         <div class="brain-card-title">智能路由</div>
         <div class="brain-card-file">随便丢材料进来，系统自动判断</div>
@@ -1320,7 +1474,7 @@
       <div class="level-system">
 
         <!-- L1 -->
-        <div class="level-card fade-up visible" data-level="1">
+        <div class="level-card fade-up" data-level="1">
           <div class="level-header">
             <div class="level-badge">L1</div>
             <div class="level-info">
@@ -1352,13 +1506,13 @@
           </div>
         </div>
 
-        <!-- L2 -->
-        <div class="level-card fade-up stagger-1 visible" data-level="2">
+        <!-- L2 (UPDATED) -->
+        <div class="level-card fade-up stagger-1" data-level="2">
           <div class="level-header">
             <div class="level-badge">L2</div>
             <div class="level-info">
-              <div class="level-title">自己的逐字稿 → 深度分析</div>
-              <div class="level-subtitle">ASR 稿 → 逐字稿清洗 + 从零重写投研报告 + Question List</div>
+              <div class="level-title">自己的逐字稿 → 7 章节全档</div>
+              <div class="level-subtitle">ASR 稿 → 7 章节全档（逐字稿 + Summary + Diligence Questions + Review Checklist + 访谈复盘 + Decision Log）</div>
             </div>
             <div class="level-toggle">+</div>
           </div>
@@ -1369,25 +1523,29 @@
                 <span class="flow-arrow">→</span>
                 <div class="flow-step"><span class="step-icon">📝</span> 逐字稿清洗</div>
                 <span class="flow-arrow">→</span>
-                <div class="flow-step"><span class="step-icon">📋</span> 从零重写投研报告</div>
+                <div class="flow-step"><span class="step-icon">📋</span> 7 章节全档</div>
                 <span class="flow-arrow">→</span>
-                <div class="flow-step"><span class="step-icon">❓</span> Question List</div>
+                <div class="flow-step"><span class="step-icon">✅</span> Review Checklist</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📊</span> Decision Log</div>
               </div>
               <div class="level-skills">
                 <span class="level-skill-tag">transcript</span>
                 <span class="level-skill-tag">founder-one-pager</span>
                 <span class="level-skill-tag">diligence-question-list</span>
                 <span class="level-skill-tag">deal-tracker</span>
+                <span class="level-skill-tag">review-checklist</span>
+                <span class="level-skill-tag">decision-log</span>
               </div>
               <div class="level-note">
-                有了自己的一手逐字稿，agent 不再依赖创始人的 pitch deck narrative，而是<strong>基于你实际听到的内容从零建立判断</strong>。逐字稿清洗和投研报告由两个 sub-agent 并行完成。
+                L2 是完整的 7 章节投研全档。agent 从一手逐字稿出发，不依赖创始人 pitch narrative，<strong>从零建立判断</strong>。包含事实核查清单、投资判断维度、访谈质量复盘和阶段性决策记录。逐字稿全文嵌入文档，不做省略。
               </div>
             </div>
           </div>
         </div>
 
-        <!-- L3 -->
-        <div class="level-card fade-up stagger-2 visible" data-level="3">
+        <!-- L3 (UPDATED) -->
+        <div class="level-card fade-up stagger-2" data-level="3">
           <div class="level-header">
             <div class="level-badge">L3</div>
             <div class="level-info">
@@ -1413,16 +1571,20 @@
                 <span class="level-skill-tag">investment-memo</span>
                 <span class="level-skill-tag">diligence-question-list</span>
                 <span class="level-skill-tag">market-sizing</span>
+                <span class="level-skill-tag">deep-research</span>
               </div>
               <div class="level-note">
                 L3 是完整的投研 pipeline。第二份逐字稿自动与第一份对比数据和定位变化；Evidence Map 交叉验证所有材料的一致性和矛盾点；Critical Attack 找最致命的攻击角度。外部研究包括竞对分析、市场数据、<strong>用户访谈</strong>等独立信息源。<strong>这一级的产出足以支撑 IC 讨论。</strong>
+              </div>
+              <div class="level-note" style="margin-top: 12px; border-left-color: var(--gold);">
+                L3 还可包含 <strong>Deep Research</strong>（2 万字级别的技术/市场深度研究），用于 IC 阶段的论据支撑。
               </div>
             </div>
           </div>
         </div>
 
         <!-- Fund Evaluation -->
-        <div class="level-card fade-up stagger-3 visible" data-level="fund">
+        <div class="level-card fade-up stagger-3" data-level="fund">
           <div class="level-header">
             <div class="level-badge">Fund</div>
             <div class="level-info">
@@ -1453,8 +1615,8 @@
           </div>
         </div>
 
-        <!-- Parallel Execution (compressed) -->
-        <div class="level-card fade-up stagger-4 visible" data-level="parallel" style="cursor: pointer;">
+        <!-- Parallel Execution -->
+        <div class="level-card fade-up stagger-4" data-level="parallel" style="cursor: pointer;">
           <div class="level-header">
             <div class="level-badge" style="background: rgba(34,211,238,0.15); color: var(--cyan); border: 2px solid var(--cyan); font-size: 20px;">⚡</div>
             <div class="level-info">
@@ -1519,10 +1681,10 @@
 
   <div class="section-divider"></div>
 
-  <!-- ── SECTION 2: TOOLKIT (merged Intel + Docs) ── -->
+  <!-- ── SECTION 2: TOOLKIT ── -->
   <section id="toolkit">
     <div class="container">
-      <div class="section-header fade-up visible">
+      <div class="section-header fade-up">
         <div class="section-tag gold">Section 02 · Toolkit</div>
         <h2>研究工具箱</h2>
         <p>情报采集、市场分析、文档处理——投研过程中的全套工具。</p>
@@ -1530,7 +1692,7 @@
 
       <div class="tools-grid">
 
-        <div class="tool-card gold-accent fade-up visible">
+        <div class="tool-card gold-accent fade-up">
           <div class="tool-card-header">
             <span class="tool-emoji">🧠</span>
             <div class="tool-toggle">+</div>
@@ -1553,7 +1715,7 @@
           </div>
         </div>
 
-        <div class="tool-card gold-accent fade-up stagger-1 visible">
+        <div class="tool-card gold-accent fade-up stagger-1">
           <div class="tool-card-header">
             <span class="tool-emoji">📊</span>
             <div class="tool-toggle">+</div>
@@ -1576,7 +1738,7 @@
           </div>
         </div>
 
-        <div class="tool-card gold-accent fade-up stagger-2 visible">
+        <div class="tool-card gold-accent fade-up stagger-2">
           <div class="tool-card-header">
             <span class="tool-emoji">📡</span>
             <div class="tool-toggle">+</div>
@@ -1590,7 +1752,7 @@
             <div class="tool-expand-inner">
               <div class="expand-features">
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>覆盖：Karpathy、Sam Altman、Garry Tan、Swyx、Amjad Masad 等核心 builder</div></div>
-                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>播客：Latent Space、No Priors、Training Data 等，含摘要</div></div>
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>播客覆盖：Latent Space、No Priors、Training Data 等，含摘要</div></div>
                 <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>每条内容附原始链接，可直接跳转验证</div></div>
               </div>
               <div class="expand-insight" style="border-left-color:var(--gold)">
@@ -1600,7 +1762,7 @@
           </div>
         </div>
 
-        <div class="tool-card purple-accent fade-up visible">
+        <div class="tool-card purple-accent fade-up">
           <div class="tool-card-header">
             <span class="tool-emoji">🎙️</span>
             <div class="tool-toggle">+</div>
@@ -1623,7 +1785,7 @@
           </div>
         </div>
 
-        <div class="tool-card purple-accent fade-up stagger-1 visible">
+        <div class="tool-card purple-accent fade-up stagger-1">
           <div class="tool-card-header">
             <span class="tool-emoji">🤝</span>
             <div class="tool-toggle">+</div>
@@ -1646,6 +1808,54 @@
           </div>
         </div>
 
+        <!-- NEW: Deal Tracker -->
+        <div class="tool-card green-accent fade-up stagger-2">
+          <div class="tool-card-header">
+            <span class="tool-emoji">📋</span>
+            <div class="tool-toggle">+</div>
+          </div>
+          <div class="tool-name-en">Deal Tracker</div>
+          <div class="tool-name-cn">项目状态追踪</div>
+          <div class="tool-desc">维护所有在看项目的状态卡，包括当前阶段、已完成分析、未验证假设、下一步动作。新材料进来自动 review 缺口。</div>
+          <div class="tool-tag">状态追踪 · 缺口分析</div>
+          <div class="tool-expand">
+            <div class="tool-expand-inner">
+              <div class="expand-features">
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--green)"></div><div>自动 review：新增材料（逐字稿/BP/数据）后自动对比 tracker，标注已解决 vs 仍缺少的信息</div></div>
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--green)"></div><div>阶段管理：从 Scout → L1 → L2 → L3 → IC，每个阶段的进入和退出条件清晰</div></div>
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--green)"></div><div>Stale 检测：超过 2 周没有动作的项目自动提醒</div></div>
+              </div>
+              <div class="expand-insight" style="border-left-color:var(--green)">
+                好的 deal tracker 不是记录你做了什么，而是<strong>告诉你还缺什么</strong>。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW: Deep Research -->
+        <div class="tool-card gold-accent fade-up">
+          <div class="tool-card-header">
+            <span class="tool-emoji">🔬</span>
+            <div class="tool-toggle">+</div>
+          </div>
+          <div class="tool-name-en">Deep Research</div>
+          <div class="tool-name-cn">深度研究</div>
+          <div class="tool-desc">IC 阶段的技术/市场深度研究。2 万字级别，88+ 处来源引用，覆盖竞对、技术路线、市场规模、关键假设验证。</div>
+          <div class="tool-tag">IC 材料 · 2 万字级</div>
+          <div class="tool-expand">
+            <div class="tool-expand-inner">
+              <div class="expand-features">
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>自定义分析框架：如六维评价矩阵（世界状态构建/稳定性/可控性/实时互动/运行成本/无限内容）</div></div>
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>多路径对比：同一领域不同技术路线的横向评分</div></div>
+                <div class="expand-feature"><div class="expand-feature-dot" style="background:var(--gold)"></div><div>每个论断标注来源：[来源: TechCrunch, 2026.03] 格式</div></div>
+              </div>
+              <div class="expand-insight" style="border-left-color:var(--gold)">
+                Deep Research 不是把所有信息堆在一起，而是<strong>建立一个可以做判断的分析框架</strong>。
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1655,7 +1865,7 @@
   <!-- ── SECTION 3: FULL-STACK ABILITIES ── -->
   <section id="abilities">
     <div class="container">
-      <div class="section-header fade-up visible">
+      <div class="section-header fade-up">
         <div class="section-tag green">Section 03 · Full-Stack Agent</div>
         <h2>全栈 Agent 能力</h2>
         <p>这不只是投研——同一个 agent 还是健身教练、日程管家、候选人审计官、睡眠分析师。</p>
@@ -1663,7 +1873,7 @@
 
       <div class="abilities-grid">
 
-        <div class="ability-card fade-up visible">
+        <div class="ability-card fade-up">
           <span class="ability-emoji">🏋️ 😴</span>
           <div class="ability-name">健身教练 + 睡眠分析</div>
           <div class="ability-desc">
@@ -1674,7 +1884,7 @@
           <div class="ability-formula">Whoop → 日程 + 训练日志 → 四维归因 → A/B/C 档建议</div>
         </div>
 
-        <div class="ability-card fade-up stagger-1 visible">
+        <div class="ability-card fade-up stagger-1">
           <span class="ability-emoji">👤 📅</span>
           <div class="ability-name">候选人评估 + 面试安排</div>
           <div class="ability-desc">
@@ -1685,7 +1895,7 @@
           <div class="ability-formula">简历 → 审计 → 面试文档 → 日程 + 会议室 + 文档挂载</div>
         </div>
 
-        <div class="ability-card fade-up stagger-2 visible">
+        <div class="ability-card fade-up stagger-2">
           <span class="ability-emoji">📊 🔄</span>
           <div class="ability-name">每周复盘 + 自我改进</div>
           <div class="ability-desc">
@@ -1702,24 +1912,177 @@
 
   <div class="section-divider"></div>
 
+  <!-- ── SECTION 03.5: POST-INVESTMENT ── -->
+  <section id="post-invest">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-tag red">Section 03.5 · Post-Investment</div>
+        <h2>投后管理 Pipeline</h2>
+        <p>从投后第一次沟通到持续财务追踪，用数据判断创始人成长性。</p>
+      </div>
+
+      <div class="level-system">
+
+        <!-- Card 1: 沟通 Log -->
+        <div class="level-card fade-up" data-level="log">
+          <div class="level-header">
+            <div class="level-badge">📝</div>
+            <div class="level-info">
+              <div class="level-title">沟通 Log · 每次面访自动生成</div>
+              <div class="level-subtitle">与创始人每次沟通后，自动生成结构化投后 Log · <span style="color:var(--red);font-weight:600;">已记录 12 次</span></div>
+            </div>
+            <div class="level-toggle">+</div>
+          </div>
+          <div class="level-expand">
+            <div class="level-expand-inner">
+              <div class="level-flow">
+                <div class="flow-step"><span class="step-icon">🎙️</span> 面访/通话</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📝</span> 逐字稿清洗</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📋</span> 结构化 Log</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📤</span> 上传文档</div>
+              </div>
+              <div class="level-skills">
+                <span class="level-skill-tag">transcript</span>
+                <span class="level-skill-tag">post-investment-tracking-log</span>
+              </div>
+              <div class="level-note">
+                每次与创始人沟通后自动生成：核心进展、关键决策、风险信号、待跟进事项。<strong>不遗漏、不美化</strong>——记录创始人说了什么，做了什么，两者是否一致。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: 创始人成长性追踪 -->
+        <div class="level-card fade-up stagger-1" data-level="growth">
+          <div class="level-header">
+            <div class="level-badge">📈</div>
+            <div class="level-info">
+              <div class="level-title">创始人成长性 · 跨时间线对比</div>
+              <div class="level-subtitle">通过多次沟通 Log 的前后对比，评估创始人的成长轨迹 · <span style="color:var(--green);font-weight:600;">追踪 5 位创始人</span></div>
+            </div>
+            <div class="level-toggle">+</div>
+          </div>
+          <div class="level-expand">
+            <div class="level-expand-inner">
+              <div class="level-flow">
+                <div class="flow-step"><span class="step-icon">📋</span> Log #1</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📋</span> Log #2</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📋</span> Log #N</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">🔍</span> 前后对比矩阵</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📊</span> 成长性评估</div>
+              </div>
+              <div class="level-note">
+                成长性不是创始人说了什么新东西，而是<strong>上次的承诺这次兑现了多少</strong>。对比维度：战略一致性、执行力兑现、认知升级速度、团队建设进展。如果创始人每次都在讲新故事但老问题没解决——这本身就是信号。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: 财务数据连续 Tracking -->
+        <div class="level-card fade-up stagger-2" data-level="finance">
+          <div class="level-header">
+            <div class="level-badge">💰</div>
+            <div class="level-info">
+              <div class="level-title">财务连续追踪 · 创始人定期填表 · <span style="color:var(--gold);font-weight:600;">月度更新</span></div>
+              <div class="level-subtitle">被投企业关键财务指标的持续采集与趋势分析</div>
+            </div>
+            <div class="level-toggle">+</div>
+          </div>
+          <div class="level-expand">
+            <div class="level-expand-inner">
+              <div class="level-flow">
+                <div class="flow-step"><span class="step-icon">📊</span> 创始人填表</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📥</span> 数据入库</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📈</span> 趋势图</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">⚠️</span> 预警检测</div>
+              </div>
+              <div class="level-skills">
+                <span class="level-skill-tag">financial-tracking</span>
+              </div>
+              <div class="level-note">
+                追踪指标：MRR/ARR、Burn Rate、Runway、用户数、留存率、毛利率。数据来源：创始人定期填表。<strong>不依赖创始人主动汇报风险——用数据自动发现。</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: 财务预警系统 -->
+        <div class="level-card fade-up stagger-3" data-level="alert">
+          <div class="level-header">
+            <div class="level-badge">🚨</div>
+            <div class="level-info">
+              <div class="level-title">财务预警 · 自动触发</div>
+              <div class="level-subtitle">当关键指标触发阈值时，自动生成预警报告 · <span style="color:var(--red);font-weight:600;">6 条预警规则</span></div>
+            </div>
+            <div class="level-toggle">+</div>
+          </div>
+          <div class="level-expand">
+            <div class="level-expand-inner">
+              <div class="level-flow">
+                <div class="flow-step"><span class="step-icon">📊</span> 指标监测</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">⚠️</span> 阈值触发</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">📋</span> 预警报告</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-step"><span class="step-icon">🔔</span> 通知投资人</div>
+              </div>
+              <table class="alert-table">
+                <thead>
+                  <tr><th>预警指标</th><th>触发阈值</th><th>严重等级</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Runway</td><td>&lt; 12 个月</td><td><span class="alert-yellow">🟡 关注</span></td></tr>
+                  <tr><td>Runway</td><td>&lt; 6 个月</td><td><span class="alert-red">🔴 紧急</span></td></tr>
+                  <tr><td>MRR</td><td>连续 2 月下降</td><td><span class="alert-yellow">🟡 关注</span></td></tr>
+                  <tr><td>MRR</td><td>连续 3 月下降 &gt;10%</td><td><span class="alert-red">🔴 紧急</span></td></tr>
+                  <tr><td>Burn Rate</td><td>单月突增 &gt;30%</td><td><span class="alert-yellow">🟡 关注</span></td></tr>
+                  <tr><td>用户留存</td><td>月留存 &lt;20%</td><td><span class="alert-red">🔴 紧急</span></td></tr>
+                </tbody>
+              </table>
+              <div class="level-note">
+                <strong>预警的价值不是预测危机，而是在危机可挽救时就介入。</strong> Runway &lt; 12 个月时你还有选择；&lt; 6 个月时你只能被动接受。
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ── SECTION 4: CASE STUDY ── -->
   <section id="case">
     <div class="container">
-      <div class="section-header fade-up visible">
-        <div class="section-tag">Section 04 · Real Output</div>
+      <div class="section-header fade-up">
+        <div class="section-tag cyan">Section 04 · Real Output</div>
         <h2>真实输出长什么样</h2>
         <p>不是 demo，是实际跑出来的产出。点击标签切换案例。</p>
       </div>
 
       <!-- Case tabs -->
-      <div class="case-tabs fade-up visible">
-        <div class="case-tab active" data-target="case-necklens">📎 投研案例 · NeckLens</div>
-        <div class="case-tab" data-target="case-fitness">🏋️ 健身 + 睡眠分析</div>
+      <div class="case-tabs fade-up">
+        <div class="case-tab active" data-target="case-necklens">📎 投研 · NeckLens</div>
+        <div class="case-tab" data-target="case-fitness">🏋️ 健身 + 睡眠</div>
+        <div class="case-tab" data-target="case-l2">📋 L2 全档 · Echo</div>
+        <div class="case-tab" data-target="case-postinvest">📈 投后 · Aria</div>
       </div>
 
       <!-- Case Panel: NeckLens -->
       <div class="case-panel active" id="case-necklens">
-        <div class="case-intro fade-up visible">
+        <div class="case-intro fade-up">
           <div class="case-intro-left">
             <div class="case-badge">AI Wearable · Pre-A · 北美市场</div>
             <div class="case-name">Project NeckLens</div>
@@ -1740,7 +2103,7 @@
           </div>
         </div>
 
-        <div class="case-flow fade-up visible">
+        <div class="case-flow fade-up">
           <!-- Node A: One-Pager -->
           <div class="case-node" data-case="1">
             <div class="case-node-header">
@@ -1846,12 +2209,140 @@
             </div>
           </div>
 
-        </div><!-- end case-flow -->
-      </div><!-- end case-necklens -->
+        </div>
+      </div>
+
+      <!-- Case Panel: L2 Full Report · Project Echo -->
+      <div class="case-panel" id="case-l2">
+        <div class="case-intro fade-up">
+          <div class="case-intro-left">
+            <div class="case-badge">AI 硬件 · 早期轮次 · 跨境</div>
+            <div class="case-name">Project Echo</div>
+            <div class="case-desc">AI + 硬件品类的早期项目。创始人有过往硬件量产经验，首批产品已出货，正在验证核心 AI 功能的用户价值。</div>
+            <div class="case-meta">
+              <span class="case-meta-item">🎙️ 约 1 小时录音稿</span>
+              <span class="case-meta-item">⏱ Pipeline 约 15 分钟</span>
+              <span class="case-meta-item">📄 全档 7 章节</span>
+            </div>
+          </div>
+          <div class="case-intro-right">
+            <div class="case-stat-grid">
+              <div class="case-stat"><div class="case-stat-num">早期</div><div class="case-stat-label">融资阶段</div></div>
+              <div class="case-stat"><div class="case-stat-num">千万级</div><div class="case-stat-label">估值量级</div></div>
+              <div class="case-stat"><div class="case-stat-num">40+</div><div class="case-stat-label">话题章节</div></div>
+              <div class="case-stat"><div class="case-stat-num">7</div><div class="case-stat-label">报告章节</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-flow fade-up">
+          <div class="case-node" data-case="l2-1">
+            <div class="case-node-header">
+              <div class="case-node-num">01</div>
+              <div class="case-node-info">
+                <div class="case-node-name">逐字稿清洗</div>
+                <div class="case-node-sub">长篇 ASR 稿 → 40+ 个话题章节 · 完整嵌入</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">清洗规则</div>
+                  <div class="case-output-text">去 ASR 噪音（语气词、重复、误识别），按话题自动分组，说话人身份标注（<strong>加粗</strong> = 投资人提问，普通 = 创始人回答）。每个话题末尾附 [校对备注]：核心意思、存疑词、是否做了推论性修正。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">热词表自动生成</div>
+                  <div class="case-output-text">ASR 高频误识别词自动收集：MATLAB ← "麦纳的算法" | Token 化 ← "通化" | WHOOP ← "OAK" | Oura Ring ← "爱克来"。下次录音自动应用修正。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-node" data-case="l2-2">
+            <div class="case-node-header">
+              <div class="case-node-num">02</div>
+              <div class="case-node-info">
+                <div class="case-node-name">核心 Summary + L1 交叉验证</div>
+                <div class="case-node-sub">5 个核心发现 + 3 个数据矛盾点</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">核心发现</div>
+                  <div class="case-output-text">
+                    ① 创始人有验证过的 0→规模化经验，坦诚务实<br>
+                    ② 首批硬件出货数据合理：退货率低于品类均值，正毛利<br>
+                    ③ AI 相关功能已有初步落地，有一定归因数据<br>
+                    ④ <span class="case-conf low">核心 thesis 完全未验证</span> — 下一版本是关键里程碑<br>
+                    ⑤ 技术团队背景仍是盲区
+                  </div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">⚠️ 数据矛盾</div>
+                  <div class="case-output-text">当前估值与实际收入存在显著倍数差距。需要下一版产品的用户数据支撑才能证明估值合理性。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-node" data-case="l2-3">
+            <div class="case-node-header">
+              <div class="case-node-num">03</div>
+              <div class="case-node-info">
+                <div class="case-node-name">Review Checklist + 投资判断</div>
+                <div class="case-node-sub">14 项事实核查 + 7 维度判断</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">事实核查（抽样）</div>
+                  <div class="case-output-text">
+                    ✅ 创始人前公司 C 轮过亿 — 投中网/36kr 确认<br>
+                    ✅ 创始人入选行业榜单 — 官网确认<br>
+                    ⚠️ 竞品融资 $12M — 搜索结果不够精确，标注为"未完全验证"
+                  </div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">Decision Log</div>
+                  <div class="case-output-text case-conclusion">🟡 Continue — 创始人可信、产品有 traction，但核心 thesis 未验证。等下一版数据后再做 IC 判断。致命反方论点：如果核心 AI 功能效果不显著，产品退化为普通硬件，当前估值无法成立。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-node" data-case="l2-4">
+            <div class="case-node-header">
+              <div class="case-node-num">04</div>
+              <div class="case-node-info">
+                <div class="case-node-name">访谈复盘</div>
+                <div class="case-node-sub">质量评估 + 创始人印象 + 下次建议</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">访谈质量</div>
+                  <div class="case-output-text">信息密度高，创始人主动分享了成本结构和竞争策略细节。但核心差异化功能被创始人用"正在做"带过，下次需要追问具体的技术验证计划和时间表。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">下次 Call 建议</div>
+                  <div class="case-output-text">🔴 必须追问：核心差异化功能的技术路径、已有实验数据、下一版本的里程碑定义。<br>🟡 可选追问：技术团队背景、核心能力深度、竞品对比测试计划。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end case-l2 -->
 
       <!-- Case Panel: Fitness + Sleep -->
       <div class="case-panel" id="case-fitness">
-        <div class="case-intro fade-up visible">
+        <div class="case-intro fade-up">
           <div class="case-intro-left">
             <div class="case-badge">Whoop API · 日历 API · 四维归因</div>
             <div class="case-name">每日恢复分析</div>
@@ -1872,8 +2363,7 @@
           </div>
         </div>
 
-        <div class="case-flow fade-up visible">
-          <!-- Step 1: 数据接收 -->
+        <div class="case-flow fade-up">
           <div class="case-node" data-case="f1">
             <div class="case-node-header">
               <div class="case-node-num">01</div>
@@ -1897,7 +2387,6 @@
             </div>
           </div>
 
-          <!-- Step 2: 日程拉取 -->
           <div class="case-node" data-case="f2">
             <div class="case-node-header">
               <div class="case-node-num">02</div>
@@ -1917,7 +2406,6 @@
             </div>
           </div>
 
-          <!-- Step 3: 训练交叉 -->
           <div class="case-node" data-case="f3">
             <div class="case-node-header">
               <div class="case-node-num">03</div>
@@ -1941,7 +2429,6 @@
             </div>
           </div>
 
-          <!-- Step 4: 四维归因 -->
           <div class="case-node" data-case="f4">
             <div class="case-node-header">
               <div class="case-node-num">04</div>
@@ -1970,7 +2457,145 @@
             </div>
           </div>
         </div>
-      </div><!-- end case-fitness -->
+      </div>
+
+
+
+      <!-- Case Panel: Post-Investment · Project Aria -->
+      <div class="case-panel" id="case-postinvest">
+        <div class="case-intro fade-up">
+          <div class="case-intro-left">
+            <div class="case-badge">AI 消费硬件 · 种子轮已投 · 跨境</div>
+            <div class="case-name">Project Aria</div>
+            <div class="case-desc">AI 消费硬件项目，种子轮已投。投后持续跟踪创始人执行力、产品里程碑和财务健康度。</div>
+            <div class="case-meta">
+              <span class="case-meta-item">📋 3 次面访</span>
+              <span class="case-meta-item">📊 月度财务</span>
+              <span class="case-meta-item">📈 成长性追踪</span>
+            </div>
+          </div>
+          <div class="case-intro-right">
+            <div class="case-stat-grid">
+              <div class="case-stat"><div class="case-stat-num">3 次</div><div class="case-stat-label">面访记录</div></div>
+              <div class="case-stat"><div class="case-stat-num">3 月+</div><div class="case-stat-label">追踪周期</div></div>
+              <div class="case-stat"><div class="case-stat-num">高</div><div class="case-stat-label">承诺兑现</div></div>
+              <div class="case-stat"><div class="case-stat-num" style="color: var(--green);">✓</div><div class="case-stat-label">健康状态</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-flow fade-up">
+          <!-- Node 01: 第一次面访 -->
+          <div class="case-node" data-case="p1">
+            <div class="case-node-header">
+              <div class="case-node-num">01</div>
+              <div class="case-node-info">
+                <div class="case-node-name">投后 Log · 第一次面访</div>
+                <div class="case-node-sub">投后第 1 个月 · 种子轮交割后首次沟通</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">核心进展</div>
+                  <div class="case-output-text">产品原型完成，内部测试留存数据健康。团队完成首轮扩张，供应链已确认首批产能。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">⚠️ 风险信号</div>
+                  <div class="case-output-text">创始人提到团队扩张节奏偏快，culture 还没完全建立。硬件 BOM 成本比预期略高。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 02: 第三次面访 -->
+          <div class="case-node" data-case="p2">
+            <div class="case-node-header">
+              <div class="case-node-num">02</div>
+              <div class="case-node-info">
+                <div class="case-node-name">投后 Log · 第三次面访（3 个月后）</div>
+                <div class="case-node-sub">投后第 3 个月 · 产品已上市</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">核心进展</div>
+                  <div class="case-output-text">首批产品已发货。早期转化率高于品类平均，用户留存数据健康。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">前后对比（承诺 vs 实际）</div>
+                  <div class="case-output-text">
+                    发货时间：承诺 → 提前完成 <span class="case-conf high">✅</span><br>
+                    BOM 成本：承诺 → 实际略高于预期 <span class="case-tag-warn">⚠️</span><br>
+                    团队规模：承诺 → 基本达成但未满编 <span class="case-tag-warn">⚠️</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 03: 成长性评估 -->
+          <div class="case-node" data-case="p3">
+            <div class="case-node-header">
+              <div class="case-node-num">03</div>
+              <div class="case-node-info">
+                <div class="case-node-name">创始人成长性评估</div>
+                <div class="case-node-sub">基于 3 次沟通 Log 的结构化评估</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">战略一致性</div>
+                  <div class="case-output-text case-conclusion">⭐⭐⭐⭐ — 三次沟通的核心定位未漂移，始终聚焦陪伴场景。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">执行力兑现</div>
+                  <div class="case-output-text case-conclusion">⭐⭐⭐ — 产品按时交付，但成本控制略低于预期。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">认知升级</div>
+                  <div class="case-output-text case-conclusion">⭐⭐⭐⭐⭐ — 第一次面访时对 GTM 理解模糊，第三次已经能清晰拆解北美 vs 国内的差异化打法。</div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">总评</div>
+                  <div class="case-output-text" style="color: var(--green); font-weight: 600;">成长性强，值得持续投入关注度。</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 04: 财务追踪 -->
+          <div class="case-node" data-case="p4">
+            <div class="case-node-header">
+              <div class="case-node-num">04</div>
+              <div class="case-node-info">
+                <div class="case-node-name">财务追踪 + 预警状态</div>
+                <div class="case-node-sub">月度财务指标 · 创始人定期填表</div>
+              </div>
+              <div class="case-node-toggle">+</div>
+            </div>
+            <div class="case-node-content">
+              <div class="case-output">
+                <div class="case-output-block">
+                  <div class="case-output-label">当前财务指标</div>
+                  <div class="case-output-text">
+                    Runway 充裕 <span class="case-conf high">🟢</span> · 月 Burn 可控 · 收入连续增长 · 留存健康
+                  </div>
+                </div>
+                <div class="case-output-block">
+                  <div class="case-output-label">预警状态</div>
+                  <div class="case-output-text" style="color: var(--green); font-weight: 600;">全部绿灯 · 无触发项</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -2006,7 +2631,9 @@
     document.querySelectorAll('.level-card').forEach(card => {
       card.querySelector('.level-header').addEventListener('click', () => {
         const isExpanded = card.classList.contains('expanded');
-        document.querySelectorAll('.level-card.expanded').forEach(c => c.classList.remove('expanded'));
+        // Only collapse cards in the same section
+        const section = card.closest('section') || card.closest('div');
+        section.querySelectorAll('.level-card.expanded').forEach(c => c.classList.remove('expanded'));
         if (!isExpanded) card.classList.add('expanded');
       });
     });
@@ -2035,11 +2662,12 @@
     document.querySelectorAll('.case-node').forEach(node => {
       node.querySelector('.case-node-header').addEventListener('click', () => {
         const isOpen = node.classList.contains('expanded');
-        document.querySelectorAll('.case-node').forEach(n => n.classList.remove('expanded'));
+        // Only collapse nodes within same panel
+        const panel = node.closest('.case-panel');
+        if (panel) panel.querySelectorAll('.case-node').forEach(n => n.classList.remove('expanded'));
         if (!isOpen) node.classList.add('expanded');
       });
     });
   </script>
-
 
 </body></html>
